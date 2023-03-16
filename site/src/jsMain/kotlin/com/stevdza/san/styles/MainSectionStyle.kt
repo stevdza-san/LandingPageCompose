@@ -41,3 +41,14 @@ val LogoStyle by ComponentStyle {
             .transform { rotate((-10).deg) }
     }
 }
+
+val SocialLinkStyle by ComponentStyle {
+    base {
+        Modifier
+            .color(Theme.Gray.rgb)
+            .transition(CSSTransition(property = "color", duration = 200.ms))
+    }
+    hover {
+        Modifier.color(Theme.Primary.rgb)
+    }
+}
