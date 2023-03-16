@@ -1,6 +1,7 @@
 package com.stevdza.san.components
 
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import com.stevdza.san.models.Section
 import com.stevdza.san.models.Theme
 import com.stevdza.san.styles.LogoStyle
@@ -15,28 +16,41 @@ import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.silk.components.graphics.Image
+import com.varabyte.kobweb.silk.components.icons.fa.FaBars
+import com.varabyte.kobweb.silk.components.icons.fa.IconSize
 import com.varabyte.kobweb.silk.components.navigation.Link
+import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.components.style.toModifier
+import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
 
 @Composable
 fun Header() {
+    val breakpoint by rememberBreakpoint()
     Row(
         modifier = Modifier
-            .fillMaxWidth(80.percent)
+            .fillMaxWidth(if(breakpoint > Breakpoint.MD) 80.percent else 90.percent)
             .margin(topBottom = 50.px),
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically
     ) {
-        LeftSide()
-        RightSide()
+        LeftSide(breakpoint = breakpoint)
+        if (breakpoint > Breakpoint.MD) {
+            RightSide()
+        }
     }
 }
 
 @Composable
-fun LeftSide() {
-    Row {
+fun LeftSide(breakpoint: Breakpoint) {
+    Row(verticalAlignment = Alignment.CenterVertically) {
+        if (breakpoint <= Breakpoint.MD) {
+            FaBars(
+                modifier = Modifier.margin(right = 15.px),
+                size = IconSize.XL
+            )
+        }
         Image(
             modifier = LogoStyle.toModifier(),
             src = Res.Image.logo,
