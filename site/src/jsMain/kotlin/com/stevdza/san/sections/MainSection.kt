@@ -6,14 +6,13 @@ import com.stevdza.san.components.Header
 import com.stevdza.san.components.SocialBar
 import com.stevdza.san.models.Section
 import com.stevdza.san.models.Theme
+import com.stevdza.san.styles.MainButtonStyle
+import com.stevdza.san.styles.MainImageStyle
 import com.stevdza.san.util.Constants.FONT_FAMILY
 import com.stevdza.san.util.Constants.LOREM_IPSUM_SHORTEST
 import com.stevdza.san.util.Constants.SECTION_WIDTH
 import com.stevdza.san.util.Res
-import com.varabyte.kobweb.compose.css.FontStyle
-import com.varabyte.kobweb.compose.css.FontWeight
-import com.varabyte.kobweb.compose.css.ObjectFit
-import com.varabyte.kobweb.compose.css.TextDecorationLine
+import com.varabyte.kobweb.compose.css.*
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
@@ -28,6 +27,7 @@ import com.varabyte.kobweb.silk.components.layout.SimpleGrid
 import com.varabyte.kobweb.silk.components.layout.numColumns
 import com.varabyte.kobweb.silk.components.navigation.Link
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
+import com.varabyte.kobweb.silk.components.style.toModifier
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
@@ -144,12 +144,13 @@ fun MainText(breakpoint: Breakpoint) {
                 Text(LOREM_IPSUM_SHORTEST)
             }
             Button(
-                attrs = Modifier
+                attrs = MainButtonStyle.toModifier()
                     .height(40.px)
                     .border(width = 0.px)
                     .borderRadius(r = 5.px)
                     .backgroundColor(Theme.Primary.rgb)
                     .color(Colors.White)
+                    .cursor(Cursor.Pointer)
                     .toAttrs()
             ) {
                 Link(
@@ -171,7 +172,7 @@ fun MainImage() {
         verticalArrangement = Arrangement.Bottom
     ) {
         Image(
-            modifier = Modifier.fillMaxWidth(),
+            modifier = MainImageStyle.toModifier().fillMaxWidth(),
             src = Res.Image.main,
             desc = "Main Image"
         )
