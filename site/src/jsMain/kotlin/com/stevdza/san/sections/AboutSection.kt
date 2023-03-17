@@ -1,7 +1,7 @@
 package com.stevdza.san.sections
 
 import androidx.compose.runtime.Composable
-import com.stevdza.san.components.SkillBar
+import com.stevdza.san.components.SectionTitle
 import com.stevdza.san.models.Section
 import com.stevdza.san.util.Constants.SECTION_WIDTH
 import com.varabyte.kobweb.compose.foundation.layout.Box
@@ -21,8 +21,9 @@ fun AboutSection() {
             .padding(topBottom = 150.px),
         contentAlignment = Alignment.Center
     ) {
-        SkillBar(
-            name = "Creative"
+        SectionTitle(
+            section = Section.About,
+            alignment = Alignment.End
         )
     }
 }
