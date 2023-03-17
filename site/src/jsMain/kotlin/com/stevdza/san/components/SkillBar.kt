@@ -27,15 +27,19 @@ fun SkillBar(
     Column(
         modifier = Modifier
             .fillMaxWidth()
+            .margin(bottom = 10.px)
             .maxWidth(500.px)
             .padding(topBottom = 5.px)
     ) {
         Row(
-            modifier = Modifier.fillMaxWidth().margin(bottom = 5.px),
+            modifier = Modifier
+                .fillMaxWidth()
+                .margin(bottom = 5.px),
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
             P(
                 attrs = Modifier
+                    .margin(topBottom = 0.px)
                     .fontFamily(FONT_FAMILY)
                     .fontSize(18.px)
                     .fontWeight(FontWeight.Normal)
@@ -46,6 +50,7 @@ fun SkillBar(
             }
             P(
                 attrs = Modifier
+                    .margin(topBottom = 0.px)
                     .fontFamily(FONT_FAMILY)
                     .fontSize(18.px)
                     .fontWeight(FontWeight.Normal)
