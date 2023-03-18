@@ -12,6 +12,14 @@ object Constants {
 }
 
 object Res {
+    object Icon {
+        const val web = "web_icon.svg"
+        const val seo = "seo_icon.svg"
+        const val design = "design_icon.svg"
+        const val business = "business_icon.svg"
+        const val apple = "apple_icon.svg"
+        const val android = "android_icon.svg"
+    }
     object Image {
         const val background = "background.svg"
         const val logo = "logo.svg"

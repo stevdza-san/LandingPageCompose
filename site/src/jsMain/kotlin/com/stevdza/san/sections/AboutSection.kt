@@ -62,8 +62,8 @@ fun AboutContent() {
     ) {
         SimpleGrid(
             modifier = Modifier.fillMaxWidth(
-                if (breakpoint >= Breakpoint.MD) 100.percent
-                else 90.percent
+                if (breakpoint >= Breakpoint.MD) 90.percent
+                else 100.percent
             ),
             numColumns = numColumns(base = 1, md = 2)
         ) {
@@ -78,8 +78,7 @@ fun AboutContent() {
 @Composable
 fun AboutImage() {
     Box(
-        modifier = Modifier
-            .fillMaxWidth(),
+        modifier = Modifier.fillMaxWidth(),
         contentAlignment = Alignment.Center
     ) {
         Image(
