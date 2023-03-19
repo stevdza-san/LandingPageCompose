@@ -20,6 +20,7 @@ import org.jetbrains.compose.web.dom.Text
 @Composable
 fun AchievementCard(
     modifier: Modifier = Modifier,
+    animatedNumber: Int,
     achievement: Achievement
 ) {
     Row(
@@ -46,7 +47,7 @@ fun AchievementCard(
             ) {
                 Text(
                     if (achievement == Achievement.Completed)
-                        "${achievement.number}+" else "${achievement.number}"
+                        "${animatedNumber}+" else "$animatedNumber"
                 )
             }
             P(
