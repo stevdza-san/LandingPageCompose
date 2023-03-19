@@ -1,10 +1,7 @@
 package com.stevdza.san.pages
 
 import androidx.compose.runtime.*
-import com.stevdza.san.sections.AboutSection
-import com.stevdza.san.sections.MainSection
-import com.stevdza.san.sections.PortfolioSection
-import com.stevdza.san.sections.ServiceSection
+import com.stevdza.san.sections.*
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.ui.Alignment
@@ -24,5 +21,6 @@ fun HomePage() {
         AboutSection()
         ServiceSection()
         PortfolioSection()
+        AchievementsSection()
     }
 }
