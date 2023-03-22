@@ -117,7 +117,10 @@ fun TestimonialCards(
             testimonial2.forEach { testimonial ->
                 TestimonialCard(
                     modifier = Modifier
-                        .margin(bottom = if (breakpoint > Breakpoint.MD) 0.px else 40.px)
+                        .margin(
+                            right = if (breakpoint > Breakpoint.SM) 40.px else 0.px,
+                            bottom = if (breakpoint > Breakpoint.MD) 0.px else 40.px
+                        )
                         .visibility(
                             setVisibility(
                                 selectedPage = selectedPage,
