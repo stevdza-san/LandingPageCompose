@@ -97,7 +97,7 @@ fun ExperienceDetails(
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .margin(left = animatedMargin)
+                .margin(left = if(breakpoint <= Breakpoint.SM) 0.px else animatedMargin)
                 .transition(
                     CSSTransition(
                         property = "margin",
