@@ -180,7 +180,7 @@ fun ExperienceNumber(
                     .fontFamily(FONT_FAMILY)
                     .fontSize(16.px)
                     .fontWeight(FontWeight.Bold)
-                    .color(if (active) Colors.White else Theme.Secondary.rgb)
+                    .color(if (active) Colors.White else Theme.Primary.rgb)
                     .toAttrs()
             ) {
                 Text(experience.number)
