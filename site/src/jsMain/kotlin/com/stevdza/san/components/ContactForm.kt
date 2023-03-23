@@ -21,12 +21,18 @@ import org.jetbrains.compose.web.dom.*
 @Composable
 fun ContactForm(breakpoint: Breakpoint) {
     Form(
-        action = ""
+        action = "https://formspree.io/f/xbjeydwd",
+        attrs = Modifier
+            .attrsModifier {
+                attr("method", "POST")
+            }
+            .toAttrs()
     ) {
         Label(
             attrs = Modifier
                 .classNames("form-label")
-                .toAttrs()
+                .toAttrs(),
+            forId = "inputName"
         ) {
             Text("Name")
         }
@@ -44,6 +50,7 @@ fun ContactForm(breakpoint: Breakpoint) {
                 .boxShadow(0.px, 0.px, 0.px, 0.px, null)
                 .attrsModifier {
                     attr("placeholder", "Full Name")
+                    attr("name", "name")
                     attr("required", "true")
                 }
                 .toAttrs()
@@ -51,7 +58,8 @@ fun ContactForm(breakpoint: Breakpoint) {
         Label(
             attrs = Modifier
                 .classNames("form-label")
-                .toAttrs()
+                .toAttrs(),
+            forId = "inputEmail"
         ) {
             Text("Email")
         }
@@ -69,6 +77,7 @@ fun ContactForm(breakpoint: Breakpoint) {
                 .boxShadow(0.px, 0.px, 0.px, 0.px, null)
                 .attrsModifier {
                     attr("placeholder", "Email Address")
+                    attr("name", "email")
                     attr("required", "true")
                 }
                 .toAttrs()
@@ -76,7 +85,8 @@ fun ContactForm(breakpoint: Breakpoint) {
         Label(
             attrs = Modifier
                 .classNames("form-label")
-                .toAttrs()
+                .toAttrs(),
+            forId = "inputMessage"
         ) {
             Text("Message")
         }
@@ -94,6 +104,7 @@ fun ContactForm(breakpoint: Breakpoint) {
                 .boxShadow(0.px, 0.px, 0.px, 0.px, null)
                 .attrsModifier {
                     attr("placeholder", "Your Message")
+                    attr("name", "message")
                     attr("required", "true")
                 }
                 .toAttrs()
