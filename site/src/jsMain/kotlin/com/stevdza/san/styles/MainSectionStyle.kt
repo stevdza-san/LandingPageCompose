@@ -21,12 +21,10 @@ val NavigationItemStyle by ComponentStyle {
             .transition(CSSTransition(property = "color", duration = 200.ms))
     }
     anyLink {
-        Modifier
-            .color(Theme.Secondary.rgb)
+        Modifier.color(Theme.Secondary.rgb)
     }
     hover {
-        Modifier
-            .color(Theme.Primary.rgb)
+        Modifier.color(Theme.Primary.rgb)
     }
 }
 
