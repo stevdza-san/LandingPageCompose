@@ -51,7 +51,7 @@ fun SocialBar(row: Boolean = false) {
 private fun SocialLinks(row: Boolean = false) {
     Link(
         path = WEBSITE,
-        openExternalLinksStrategy = OpenLinkStrategy.IN_NEW_TAB_FOREGROUND
+        openExternalLinksStrategy = OpenLinkStrategy.IN_NEW_TAB
     ) {
         FaFacebook(
             modifier = SocialLinkStyle.toModifier()
@@ -64,7 +64,7 @@ private fun SocialLinks(row: Boolean = false) {
     }
     Link(
         path = WEBSITE,
-        openExternalLinksStrategy = OpenLinkStrategy.IN_NEW_TAB_FOREGROUND
+        openExternalLinksStrategy = OpenLinkStrategy.IN_NEW_TAB
     ) {
         FaTwitter(
             modifier = SocialLinkStyle.toModifier()
@@ -77,7 +77,7 @@ private fun SocialLinks(row: Boolean = false) {
     }
     Link(
         path = WEBSITE,
-        openExternalLinksStrategy = OpenLinkStrategy.IN_NEW_TAB_FOREGROUND
+        openExternalLinksStrategy = OpenLinkStrategy.IN_NEW_TAB
     ) {
         FaInstagram(
             modifier = SocialLinkStyle.toModifier()
@@ -90,7 +90,7 @@ private fun SocialLinks(row: Boolean = false) {
     }
     Link(
         path = WEBSITE,
-        openExternalLinksStrategy = OpenLinkStrategy.IN_NEW_TAB_FOREGROUND
+        openExternalLinksStrategy = OpenLinkStrategy.IN_NEW_TAB
     ) {
         FaLinkedin(
             modifier = SocialLinkStyle.toModifier(),

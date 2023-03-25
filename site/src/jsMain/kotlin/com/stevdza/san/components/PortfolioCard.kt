@@ -36,7 +36,7 @@ fun PortfolioCard(
         modifier = PortfolioSectionStyle.toModifier()
             .textDecorationLine(TextDecorationLine.None),
         path = link,
-        openExternalLinksStrategy = OpenLinkStrategy.IN_NEW_TAB_FOREGROUND
+        openExternalLinksStrategy = OpenLinkStrategy.IN_NEW_TAB
     ) {
         Column(modifier = modifier.id("columnParent")) {
             Box(
