@@ -10,6 +10,7 @@ import com.stevdza.san.util.Res
 import com.varabyte.kobweb.compose.css.FontWeight
 import com.varabyte.kobweb.compose.css.ObjectFit
 import com.varabyte.kobweb.compose.css.TextDecorationLine
+import com.varabyte.kobweb.compose.css.Width
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.ui.Alignment
@@ -38,7 +39,11 @@ fun PortfolioCard(
         path = link,
         openExternalLinksStrategy = OpenLinkStrategy.IN_NEW_TAB
     ) {
-        Column(modifier = modifier.id("columnParent")) {
+        Column(
+            modifier = modifier
+                .id("columnParent")
+                .width(Width.MaxContext)
+        ) {
             Box(
                 modifier = Modifier
                     .id("boxParent")
