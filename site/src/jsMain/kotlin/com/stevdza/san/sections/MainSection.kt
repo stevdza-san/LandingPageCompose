@@ -1,7 +1,6 @@
 package com.stevdza.san.sections
 
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
 import com.stevdza.san.components.Header
 import com.stevdza.san.components.SocialBar
 import com.stevdza.san.models.Section
@@ -61,7 +60,7 @@ fun MainBackground() {
 
 @Composable
 fun MainContent(onMenuClicked: () -> Unit) {
-    val breakpoint by rememberBreakpoint()
+    val breakpoint = rememberBreakpoint()
     Column(
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.SpaceBetween,

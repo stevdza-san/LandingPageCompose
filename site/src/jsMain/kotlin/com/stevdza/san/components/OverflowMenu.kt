@@ -28,7 +28,7 @@ import org.jetbrains.compose.web.css.*
 @Composable
 fun OverflowMenu(onMenuClosed: () -> Unit) {
     val scope = rememberCoroutineScope()
-    val breakpoint by rememberBreakpoint()
+    val breakpoint = rememberBreakpoint()
     var translateX by remember { mutableStateOf((-100).percent) }
     var opacity by remember { mutableStateOf(0.percent) }
 

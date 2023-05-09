@@ -32,7 +32,7 @@ fun ExperienceSection() {
 
 @Composable
 fun ExperienceContent() {
-    val breakpoint by rememberBreakpoint()
+    val breakpoint = rememberBreakpoint()
     var animatedMargin by remember { mutableStateOf(200.px) }
 
     ObserveViewportEntered(

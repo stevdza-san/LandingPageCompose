@@ -1,7 +1,6 @@
 package com.stevdza.san.sections
 
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
 import com.stevdza.san.components.SectionTitle
 import com.stevdza.san.components.ServiceCard
 import com.stevdza.san.models.Section
@@ -34,7 +33,7 @@ fun ServiceSection() {
 
 @Composable
 fun ServiceContent() {
-    val breakpoint by rememberBreakpoint()
+    val breakpoint = rememberBreakpoint()
     Column(
         modifier = Modifier
             .fillMaxWidth(

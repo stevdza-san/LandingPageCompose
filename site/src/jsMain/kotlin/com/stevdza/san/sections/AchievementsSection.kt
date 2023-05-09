@@ -21,7 +21,7 @@ import org.jetbrains.compose.web.css.px
 
 @Composable
 fun AchievementsSection() {
-    val breakpoint by rememberBreakpoint()
+    val breakpoint = rememberBreakpoint()
     Box(
         modifier = Modifier
             .id(Section.Achievements.id)

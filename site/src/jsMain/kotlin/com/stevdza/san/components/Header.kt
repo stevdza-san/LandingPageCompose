@@ -1,7 +1,6 @@
 package com.stevdza.san.components
 
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
 import com.stevdza.san.models.Section
 import com.stevdza.san.models.Theme
 import com.stevdza.san.styles.LogoStyle
@@ -27,7 +26,7 @@ import org.jetbrains.compose.web.css.px
 
 @Composable
 fun Header(onMenuClicked: () -> Unit) {
-    val breakpoint by rememberBreakpoint()
+    val breakpoint = rememberBreakpoint()
     Row(
         modifier = Modifier
             .fillMaxWidth(if (breakpoint > Breakpoint.MD) 80.percent else 90.percent)

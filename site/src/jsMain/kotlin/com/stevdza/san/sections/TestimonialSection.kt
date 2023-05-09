@@ -38,7 +38,7 @@ fun TestimonialSection() {
 
 @Composable
 fun TestimonialContent() {
-    val breakpoint by rememberBreakpoint()
+    val breakpoint = rememberBreakpoint()
     var selectedPage by remember { mutableStateOf(0) }
     Column(
         modifier = Modifier

@@ -1,7 +1,6 @@
 package com.stevdza.san.sections
 
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
 import com.stevdza.san.components.SocialBar
 import com.stevdza.san.models.Section
 import com.stevdza.san.models.Theme
@@ -42,7 +41,7 @@ fun FooterSection() {
 
 @Composable
 fun FooterContent() {
-    val breakpoint by rememberBreakpoint()
+    val breakpoint = rememberBreakpoint()
     Column(
         modifier = Modifier
             .fillMaxWidth(

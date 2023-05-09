@@ -38,7 +38,7 @@ fun ContactSection() {
 @OptIn(ExperimentalComposeWebApi::class)
 @Composable
 fun ContactContent() {
-    val breakpoint by rememberBreakpoint()
+    val breakpoint = rememberBreakpoint()
     val scope = rememberCoroutineScope()
     var animatedRotation by remember { mutableStateOf(0.deg) }
 

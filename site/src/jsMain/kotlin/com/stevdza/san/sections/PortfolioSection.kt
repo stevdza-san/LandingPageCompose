@@ -1,7 +1,6 @@
 package com.stevdza.san.sections
 
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
 import com.stevdza.san.components.PortfolioCard
 import com.stevdza.san.components.SectionTitle
 import com.stevdza.san.models.Portfolio
@@ -43,7 +42,7 @@ fun PortfolioSection() {
 
 @Composable
 fun PortfolioContent() {
-    val breakpoint by rememberBreakpoint()
+    val breakpoint = rememberBreakpoint()
     Column(
         modifier = Modifier
             .fillMaxWidth(

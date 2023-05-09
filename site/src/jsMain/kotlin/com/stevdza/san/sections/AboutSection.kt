@@ -50,7 +50,7 @@ fun AboutSection() {
 
 @Composable
 fun AboutContent() {
-    val breakpoint by rememberBreakpoint()
+    val breakpoint = rememberBreakpoint()
     Column(
         modifier = Modifier
             .fillMaxWidth(

@@ -26,7 +26,7 @@ import org.jetbrains.compose.web.css.px
 
 @Composable
 fun BackToTopButton() {
-    val breakpoint by rememberBreakpoint()
+    val breakpoint = rememberBreakpoint()
     var scroll: Double? by remember { mutableStateOf(null) }
 
     LaunchedEffect(Unit) {
