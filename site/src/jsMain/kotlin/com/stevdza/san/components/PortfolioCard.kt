@@ -42,7 +42,7 @@ fun PortfolioCard(
         Column(
             modifier = modifier
                 .id("columnParent")
-                .width(Width.MaxContext)
+                .width(Width.MaxContent)
         ) {
             Box(
                 modifier = Modifier
