@@ -18,8 +18,8 @@ import com.varabyte.kobweb.silk.components.graphics.Image
 import com.varabyte.kobweb.silk.components.icons.fa.FaXmark
 import com.varabyte.kobweb.silk.components.icons.fa.IconSize
 import com.varabyte.kobweb.silk.components.navigation.Link
-import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
-import com.varabyte.kobweb.silk.components.style.toModifier
+import com.varabyte.kobweb.silk.style.toModifier
+import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -87,10 +87,10 @@ fun OverflowMenu(onMenuClosed: () -> Unit) {
                 Image(
                     modifier = Modifier.size(80.px),
                     src = Res.Image.logo,
-                    desc = "Logo Image"
+                    alt = "Logo Image"
                 )
             }
-            Section.values().take(6).forEach { section ->
+            Section.entries.toTypedArray().take(6).forEach { section ->
                 Link(
                     modifier = NavigationItemStyle.toModifier()
                         .margin(bottom = 10.px)

@@ -5,13 +5,13 @@ import com.varabyte.kobweb.compose.css.CSSTransition
 import com.varabyte.kobweb.compose.css.Visibility
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
-import com.varabyte.kobweb.silk.components.style.ComponentStyle
-import com.varabyte.kobweb.silk.components.style.hover
+import com.varabyte.kobweb.silk.style.selectors.hover
+import com.varabyte.kobweb.silk.style.CssStyle
 import org.jetbrains.compose.web.css.ms
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
 
-val PortfolioSectionStyle by ComponentStyle {
+val PortfolioSectionStyle = CssStyle {
     cssRule(" > #columnParent > #boxParent > #greenOverlay") {
         Modifier
             .width(0.px)
@@ -57,7 +57,7 @@ val PortfolioSectionStyle by ComponentStyle {
     }
 }
 
-val PortfolioArrowIconStyle by ComponentStyle {
+val PortfolioArrowIconStyle = CssStyle {
     base {
         Modifier
             .color(Theme.Gray.rgb)

@@ -14,7 +14,7 @@ import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.silk.components.layout.SimpleGrid
 import com.varabyte.kobweb.silk.components.layout.numColumns
-import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
+import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import kotlinx.coroutines.launch
 import org.jetbrains.compose.web.css.px
@@ -45,7 +45,7 @@ fun AchievementsContent(breakpoint: Breakpoint) {
         distanceFromTop = 700.0,
         onViewportEntered = {
             viewportEntered = true
-            Achievement.values().forEach { achievement ->
+            Achievement.entries.forEach { achievement ->
                 scope.launch {
                     animateNumbers(
                         number = achievement.number,
@@ -59,7 +59,7 @@ fun AchievementsContent(breakpoint: Breakpoint) {
     )
 
     SimpleGrid(numColumns = numColumns(base = 1, md = 2, lg = 4)) {
-        Achievement.values().forEach { achievement ->
+        Achievement.entries.forEach { achievement ->
             AchievementCard(
                 modifier = Modifier.margin(
                     right = if (achievement == Achievement.Team) 0.px

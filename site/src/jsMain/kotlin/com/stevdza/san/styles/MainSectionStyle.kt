@@ -8,28 +8,30 @@ import com.varabyte.kobweb.compose.ui.modifiers.transform
 import com.varabyte.kobweb.compose.ui.modifiers.transition
 import com.varabyte.kobweb.compose.ui.modifiers.width
 import com.varabyte.kobweb.compose.ui.styleModifier
-import com.varabyte.kobweb.silk.components.style.ComponentStyle
-import com.varabyte.kobweb.silk.components.style.anyLink
-import com.varabyte.kobweb.silk.components.style.hover
+import com.varabyte.kobweb.silk.style.CssStyle
+import com.varabyte.kobweb.silk.style.selectors.*
 import org.jetbrains.compose.web.ExperimentalComposeWebApi
 import org.jetbrains.compose.web.css.*
 
-val NavigationItemStyle by ComponentStyle {
+val NavigationItemStyle = CssStyle {
     base {
         Modifier
+            .styleModifier {
+                property("--bs-link-color", Theme.Secondary.rgb)
+            }
             .color(Theme.Secondary.rgb)
             .transition(CSSTransition(property = "color", duration = 200.ms))
     }
-    anyLink {
-        Modifier.color(Theme.Secondary.rgb)
-    }
     hover {
-        Modifier.color(Theme.Primary.rgb)
+        Modifier
+            .styleModifier {
+                property("--bs-link-hover-color", Theme.Primary.rgb)
+            }
+            .color(Theme.Primary.rgb)
     }
 }
 
-@OptIn(ExperimentalComposeWebApi::class)
-val LogoStyle by ComponentStyle {
+val LogoStyle = CssStyle {
     base {
         Modifier
             .transform { rotate(0.deg) }
@@ -41,7 +43,7 @@ val LogoStyle by ComponentStyle {
     }
 }
 
-val SocialLinkStyle by ComponentStyle {
+val SocialLinkStyle = CssStyle {
     base {
         Modifier
             .color(Theme.Gray.rgb)
@@ -52,7 +54,7 @@ val SocialLinkStyle by ComponentStyle {
     }
 }
 
-val MainButtonStyle by ComponentStyle {
+val MainButtonStyle = CssStyle {
     base {
         Modifier
             .width(100.px)
@@ -64,7 +66,7 @@ val MainButtonStyle by ComponentStyle {
 }
 
 @OptIn(ExperimentalComposeWebApi::class)
-val MainImageStyle by ComponentStyle {
+val MainImageStyle = CssStyle {
     base {
         Modifier
             .styleModifier {

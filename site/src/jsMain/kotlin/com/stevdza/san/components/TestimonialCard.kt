@@ -11,7 +11,7 @@ import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.silk.components.graphics.Image
-import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
+import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.P
 import org.jetbrains.compose.web.dom.Text
@@ -34,7 +34,7 @@ fun TestimonialCard(
                     bottomRight = 0.px
                 ),
             src = testimonial.image,
-            desc = "Avatar Image"
+            alt = "Avatar Image"
         )
         Column {
             Row(

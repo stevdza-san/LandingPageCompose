@@ -18,8 +18,8 @@ import com.varabyte.kobweb.silk.components.graphics.Image
 import com.varabyte.kobweb.silk.components.icons.fa.FaBars
 import com.varabyte.kobweb.silk.components.icons.fa.IconSize
 import com.varabyte.kobweb.silk.components.navigation.Link
-import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
-import com.varabyte.kobweb.silk.components.style.toModifier
+import com.varabyte.kobweb.silk.style.toModifier
+import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
@@ -63,7 +63,7 @@ fun LeftSide(
         Image(
             modifier = LogoStyle.toModifier(),
             src = Res.Image.logo,
-            desc = "Logo Image"
+            alt = "Logo Image"
         )
     }
 }
@@ -78,7 +78,7 @@ fun RightSide() {
             .padding(all = 20.px),
         horizontalArrangement = Arrangement.End
     ) {
-        Section.values().take(6).forEach { section ->
+        Section.entries.toTypedArray().take(6).forEach { section ->
             Link(
                 modifier = NavigationItemStyle.toModifier()
                     .padding(right = 30.px)

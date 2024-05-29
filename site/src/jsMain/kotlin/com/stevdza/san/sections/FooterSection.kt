@@ -19,8 +19,8 @@ import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.silk.components.graphics.Image
 import com.varabyte.kobweb.silk.components.navigation.Link
-import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
-import com.varabyte.kobweb.silk.components.style.toModifier
+import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
+import com.varabyte.kobweb.silk.style.toModifier
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
@@ -53,7 +53,7 @@ fun FooterContent() {
         Image(
             modifier = Modifier.size(100.px),
             src = Res.Image.logo,
-            desc = "Logo Image"
+            alt = "Logo Image"
         )
         if (breakpoint > Breakpoint.SM) {
             Row(
@@ -76,7 +76,7 @@ fun FooterContent() {
 
 @Composable
 fun FooterMenu(row: Boolean = true) {
-    Section.values().take(6).forEach { section ->
+    Section.entries.toTypedArray().take(6).forEach { section ->
         Link(
             modifier = NavigationItemStyle.toModifier()
                 .fontFamily(FONT_FAMILY)

@@ -18,7 +18,7 @@ fun RatingBar(modifier: Modifier = Modifier) {
                     .margin(right = if (it != 4) 2.px else 0.px)
                     .size(16.px),
                 src = Res.Icon.star,
-                desc = "Star Icon"
+                alt = "Star Icon"
             )
         }
     }

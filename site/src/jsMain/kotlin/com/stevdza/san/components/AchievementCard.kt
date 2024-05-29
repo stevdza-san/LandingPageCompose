@@ -32,7 +32,7 @@ fun AchievementCard(
                 .size(70.px)
                 .margin(right = 20.px),
             src = achievement.icon,
-            desc = "Achievement Icon"
+            alt = "Achievement Icon"
         )
         Column {
             P(

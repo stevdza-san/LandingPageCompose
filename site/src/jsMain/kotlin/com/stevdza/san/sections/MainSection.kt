@@ -25,8 +25,8 @@ import com.varabyte.kobweb.silk.components.graphics.Image
 import com.varabyte.kobweb.silk.components.layout.SimpleGrid
 import com.varabyte.kobweb.silk.components.layout.numColumns
 import com.varabyte.kobweb.silk.components.navigation.Link
-import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
-import com.varabyte.kobweb.silk.components.style.toModifier
+import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
+import com.varabyte.kobweb.silk.style.toModifier
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
@@ -54,7 +54,7 @@ fun MainBackground() {
             .fillMaxSize()
             .objectFit(ObjectFit.Cover),
         src = Res.Image.background,
-        desc = "Background Image"
+        alt = "Background Image"
     )
 }
 
@@ -173,7 +173,7 @@ fun MainImage() {
         Image(
             modifier = MainImageStyle.toModifier().fillMaxWidth(),
             src = Res.Image.main,
-            desc = "Main Image"
+            alt = "Main Image"
         )
     }
 }

@@ -26,8 +26,8 @@ import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.silk.components.graphics.Image
 import com.varabyte.kobweb.silk.components.layout.SimpleGrid
 import com.varabyte.kobweb.silk.components.layout.numColumns
-import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
-import com.varabyte.kobweb.silk.components.style.toModifier
+import com.varabyte.kobweb.silk.style.toModifier
+import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import kotlinx.coroutines.launch
 import org.jetbrains.compose.web.css.percent
@@ -85,7 +85,7 @@ fun AboutImage() {
             modifier = AboutImageStyle.toModifier()
                 .fillMaxWidth(80.percent),
             src = Res.Image.about,
-            desc = "About Image"
+            alt = "About Image"
         )
     }
 }
@@ -101,7 +101,7 @@ fun AboutMe() {
         distanceFromTop = 300.0,
         onViewportEntered = {
             viewportEntered = true
-            Skill.values().forEach { skill ->
+            Skill.entries.forEach { skill ->
                 scope.launch {
                     animateNumbers(
                         number = skill.percentage.value.toInt(),
@@ -132,7 +132,7 @@ fun AboutMe() {
         ) {
             Text(LOREM_IPSUM_SHORT)
         }
-        Skill.values().forEach { skill ->
+        Skill.entries.forEach { skill ->
             SkillBar(
                 title = skill.title,
                 index = skill.ordinal,

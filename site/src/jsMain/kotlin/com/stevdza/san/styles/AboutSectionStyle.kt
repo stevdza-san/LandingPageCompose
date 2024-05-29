@@ -8,13 +8,13 @@ import com.varabyte.kobweb.compose.ui.modifiers.opacity
 import com.varabyte.kobweb.compose.ui.modifiers.rotate
 import com.varabyte.kobweb.compose.ui.modifiers.transition
 import com.varabyte.kobweb.compose.ui.styleModifier
-import com.varabyte.kobweb.silk.components.style.ComponentStyle
-import com.varabyte.kobweb.silk.components.style.hover
+import com.varabyte.kobweb.silk.style.selectors.hover
+import com.varabyte.kobweb.silk.style.CssStyle
 import org.jetbrains.compose.web.ExperimentalComposeWebApi
 import org.jetbrains.compose.web.css.*
 
 @OptIn(ExperimentalComposeWebApi::class)
-val AboutImageStyle by ComponentStyle {
+val AboutImageStyle = CssStyle {
     base {
         Modifier
             .styleModifier { filter { grayscale(100.percent) } }
@@ -30,7 +30,7 @@ val AboutImageStyle by ComponentStyle {
     }
 }
 
-val AboutTextStyle by ComponentStyle {
+val AboutTextStyle = CssStyle {
     base {
         Modifier
             .opacity(50.percent)
